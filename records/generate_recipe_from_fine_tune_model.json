@@ -1,0 +1,46 @@
+[
+  {
+    "metadata": {
+      "status": "success",
+      "timestamp": "2025-03-03T13:24:30.272904",
+      "processing_time": 43.42,
+      "error": null
+    },
+    "prompt": "\n        You are a chef. Create a recipe using **only** the provided ingredients and **common seasonings** (e.g., salt, pepper, vinegar, soy sauce). \n        Do **not** add any extra ingredients.\n\n        - **Ingredients**: dark roast coffee, ground cardamom, water, almond milk, sugar, chocolate syrup\n        - **Difficulty**: Easy\n        - **Cooking time**: 30 minutes\n        - **Servings**: 3 people\n        - **Dishes**: 1\n\n        Your response **must be in valid JSON format** with the following structure:\n\n        ```json\n        {\n            \"think\": \"Your internal thoughts about how to create this recipe.\",\n            \"clean_answer\": {\n                \"dish_name\": \"Dish Name Here\",\n                \"ingredients\": [\"List of Ingredients\"],\n                \"seasonings\": [\"List of Seasonings\"],\n                \"instructions\": [\n                    \"Step 1\",\n                    \"Step 2\",\n                    \"...\"\n                ],\n                \"cooking_time\": \"30 minutes\",\n                \"difficulty\": \"Easy\"\n            }\n        }\n        ```",
+    "raw_response": "\n        You are a chef. Create a recipe using **only** the provided ingredients and **common seasonings** (e.g., salt, pepper, vinegar, soy sauce). \n        Do **not** add any extra ingredients.\n\n        - **Ingredients**: dark roast coffee, ground cardamom, water, almond milk, sugar, chocolate syrup\n        - **Difficulty**: Easy\n        - **Cooking time**: 30 minutes\n        - **Servings**: 3 people\n        - **Dishes**: 1\n\n        Your response **must be in valid JSON format** with the following structure:\n\n        ```json\n        {\n            \"think\": \"Your internal thoughts about how to create this recipe.\",\n            \"clean_answer\": {\n                \"dish_name\": \"Dish Name Here\",\n                \"ingredients\": [\"List of Ingredients\"],\n                \"seasonings\": [\"List of Seasonings\"],\n                \"instructions\": [\n                    \"Step 1\",\n                    \"Step 2\",\n                    \"...\"\n                ],\n                \"cooking_time\": \"30 minutes\",\n                \"difficulty\": \"Easy\"\n            }\n        }\n        ``` The user wants the recipe to be original and unique, not based on any pre-existing recipes. They might not be familiar with coffee as a cooking ingredient. So, they might need some explanation about coffee's role in the recipe.\n</think>\n\n```json\n{\n    \"think\": \"I wanted to create an original recipe using coffee as a cooking ingredient. Dark roast coffee is a common ingredient in many recipes, but I wanted to think through how it could be incorporated into a traditional coffee recipe. I decided to use dark roast coffee as a base for a smoothie or a drink. The idea is to blend coffee with other ingredients to create a unique flavor profile. I chose almond milk, sugar, and chocolate syrup as the main ingredients for this recipe.\",\n    \"clean_answer\": {\n        \"dish_name\": \"Coffee Smoothie\",\n        \"ingredients\": [\"dark roast coffee\", \"water\", \"almond milk\", \"sugar\", \"chocolate syrup\"],\n        \"seasonings\": [\"none\"],\n        \"instructions\": [\n            \"1. Mix dark roast coffee with water until the coffee grounds are dissolved.\",\n            \"2. Add the almond milk to the mixture and stir well.\",\n            \"3. Add sugar and chocolate syrup to the mixture.\",\n            \"4. Blend or mix until the smoothie is smooth.\",\n            \"5. Serve the smoothie in a cup with a squeeze of lime or squeeze of lemon.\",\n            \"6. Optionally, add a splash of milk to enhance the flavor.\",\n            \"7. Optionally, add a drizzle of honey or syrup.\",\n            \"8. Optionally, top with fruit or nuts.\",\n            \"9. Optionally, add a splash of water to adjust the flavor.\",\n            \"10. Enjoy your coffee-powered smoothie!\",\n            \"11. Optionally, add a splash of milk to enhance the flavor.\",\n            \"12. Optionally, add a drizzle of honey or syrup.\",\n            \"13. Optionally, top with fruit or nuts.\",\n            \"14. Optionally, add a splash of water to adjust the flavor.\",\n            \"15. Enjoy your coffee-powered smoothie!\",\n        ],\n        \"cooking_time\": \"30 minutes\",\n        \"difficulty\": \"Easy\",\n        \"servings\": \"3 people\"\n    }\n}\n```",
+    "think_response": "I wanted to create an original recipe using coffee as a cooking ingredient. Dark roast coffee is a common ingredient in many recipes, but I wanted to think through how it could be incorporated into a traditional coffee recipe. I decided to use dark roast coffee as a base for a smoothie or a drink. The idea is to blend coffee with other ingredients to create a unique flavor profile. I chose almond milk, sugar, and chocolate syrup as the main ingredients for this recipe.",
+    "clean_response": {
+      "dish_name": "Coffee Smoothie",
+      "ingredients": [
+        "dark roast coffee",
+        "water",
+        "almond milk",
+        "sugar",
+        "chocolate syrup"
+      ],
+      "seasonings": [
+        "none"
+      ],
+      "instructions": [
+        "1. Mix dark roast coffee with water until the coffee grounds are dissolved.",
+        "2. Add the almond milk to the mixture and stir well.",
+        "3. Add sugar and chocolate syrup to the mixture.",
+        "4. Blend or mix until the smoothie is smooth.",
+        "5. Serve the smoothie in a cup with a squeeze of lime or squeeze of lemon.",
+        "6. Optionally, add a splash of milk to enhance the flavor.",
+        "7. Optionally, add a drizzle of honey or syrup.",
+        "8. Optionally, top with fruit or nuts.",
+        "9. Optionally, add a splash of water to adjust the flavor.",
+        "10. Enjoy your coffee-powered smoothie!",
+        "11. Optionally, add a splash of milk to enhance the flavor.",
+        "12. Optionally, add a drizzle of honey or syrup.",
+        "13. Optionally, top with fruit or nuts.",
+        "14. Optionally, add a splash of water to adjust the flavor.",
+        "15. Enjoy your coffee-powered smoothie!"
+      ],
+      "cooking_time": "30 minutes",
+      "difficulty": "Easy",
+      "servings": "3 people"
+    }
+  }
+]
