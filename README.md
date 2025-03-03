@@ -35,12 +35,56 @@ An AI-powered recipe generator that creates cooking recipes from a list of ingre
 
 ---
 
-### Software Requirements
+### My Software Requirements
 
-- **Python**: 3.8+
+- **Python**: 3.11.6 (3.8+)
 - **PyTorch**: With CUDA support
 - **NVIDIA Drivers**: ≥535
 - **CUDA Toolkit**: ≥11.8
+
+---
+
+## Model Information 🤖
+
+This project supports two model configurations:
+
+### Base Model
+- **Model**: `deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B`
+- **Description**: A pre-trained language model optimized for natural language understanding and generation tasks, including recipe generation.
+- **Usage**: Run `python generate_recipe.py` for direct recipe generation.
+
+### Fine-tuned Model
+- **Model**: Custom fine-tuned version of `deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B`
+- **Description**: A specialized model fine-tuned on recipe-specific data for enhanced performance in generating structured recipes.
+- **Usage**: Run `python generate_recipe_from_fine_tune_model.py` for fine-tuned recipe generation.
+- **Training Data**: Fine-tuned on 20% of the [Food.com dataset](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions), ensuring high-quality recipe outputs.
+- **Memory Efficient**: Optimized for systems with limited computational resources (e.g., 8GB VRAM GPUs).
+- **Features**:
+  - **Structured JSON Output**: Returns recipes in a consistent, machine-readable format.
+  - **Recipe-Specific Optimization**: Enhanced for generating detailed and accurate recipes.
+  - **Customizable Parameters**: Supports setting cooking time, difficulty, and serving size.
+  - **Strict Ingredient Usage**: Uses only provided ingredients and common seasonings (e.g., salt, pepper, vinegar).
+
+### Example JSON Output
+```json
+{
+  "think": "I decided to make a simple and delicious soup using the provided ingredients...",
+  "clean_answer": {
+    "dish_name": "Tomato-Bean Soup",
+    "ingredients": ["sun-dried tomatoes", "black beans", "cannellini beans", "scallion", "olive oil", "balsamic vinegar", "salt", "pepper"],
+    "seasonings": ["salt", "pepper"],
+    "instructions": [
+      "1. Heat olive oil in a large pot...",
+      "2. Add sun-dried tomatoes and cook until softened...",
+      "3. Stir in black beans and cannellini beans..."
+    ],
+    "cooking_time": "30 minutes",
+    "difficulty": "Easy"
+  }
+}
+```
+
+*Note: The fine-tuned model requires additional storage space but offers more consistent recipe-focused outputs.*
 
 ---
 
@@ -48,7 +92,7 @@ An AI-powered recipe generator that creates cooking recipes from a list of ingre
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/yourusername/ai-recipe-generator.git
+    git clone https://github.com/halojybyejy/ai-recipe-generator.git
     cd ai-recipe-generator
     ```
 
@@ -86,3 +130,15 @@ An AI-powered recipe generator that creates cooking recipes from a list of ingre
     python -c "import torch; print(torch.cuda.is_available())"
     # Should output 'True'
     ```
+
+5. **Run the Recipe Generator**
+    ```bash
+    # To use the base model
+    python generate_recipe.py
+
+    # To use the fine-tuned model
+    python generate_recipe_from_fine_tune_model.py
+    ```
+
+    *Note: The fine-tuned model will only work if you have previously trained and saved a model at `./fine_tuned_model`*
+
