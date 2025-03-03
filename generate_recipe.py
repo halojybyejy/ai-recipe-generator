@@ -53,7 +53,6 @@ def generate_recipe(favorite_ingredients, favorite_cooking_methods, ingredients,
 
 favourite_ingredients = ["Egg"]
 favourite_cooking_method = ["Fry", "Soup"]
-# ingredients = ["Carrot", "Potato", "Onion", "Tomato", "Egg"]
 ingredients = ['pineapple', 'mangoes', 'banana', 'red peppers', 'watercress leaf']
 required_ingredients = ["Potato"]
 meal_type = "Dinner"

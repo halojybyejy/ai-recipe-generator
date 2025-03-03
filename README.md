@@ -68,19 +68,36 @@ This project supports two model configurations:
 ### Example JSON Output
 ```json
 {
-  "think": "I decided to make a simple and delicious soup using the provided ingredients...",
-  "clean_answer": {
-    "dish_name": "Tomato-Bean Soup",
-    "ingredients": ["sun-dried tomatoes", "black beans", "cannellini beans", "scallion", "olive oil", "balsamic vinegar", "salt", "pepper"],
-    "seasonings": ["salt", "pepper"],
-    "instructions": [
-      "1. Heat olive oil in a large pot...",
-      "2. Add sun-dried tomatoes and cook until softened...",
-      "3. Stir in black beans and cannellini beans..."
-    ],
-    "cooking_time": "30 minutes",
-    "difficulty": "Easy"
-  }
+    "metadata": {
+      "status": "success",
+      "timestamp": "2025-03-03T13:24:30.272904",
+      "processing_time": 43.42,
+      "error": null
+    },
+    "prompt": "\n You are a chef. Create a recipe using **only** the provided ingredients and ...",
+    "raw_response": "\n You are a chef. Create a recipe using **only** the provided ...",
+    "think_response": "I wanted to create an original recipe using ...",
+    "clean_response": {
+      "dish_name": "Coffee Smoothie",
+      "ingredients": [
+        "dark roast coffee",
+        "water",
+        "almond milk",
+        "sugar",
+        "chocolate syrup"
+      ],
+      "seasonings": [
+        "none"
+      ],
+      "instructions": [
+        "1. Mix dark roast coffee with water ...",
+        "2. Add the almond milk to ...",
+        "3. Add sugar and chocolate ...",
+      ],
+      "cooking_time": "30 minutes",
+      "difficulty": "Easy",
+      "servings": "3 people"
+    }
 }
 ```
 
